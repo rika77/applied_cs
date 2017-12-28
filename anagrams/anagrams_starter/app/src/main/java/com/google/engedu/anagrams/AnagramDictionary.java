@@ -35,8 +35,10 @@ public class AnagramDictionary {
     public AnagramDictionary(Reader reader) throws IOException {
         BufferedReader in = new BufferedReader(reader);
         String line;
+        ArrayList<String> wordList = new ArrayList<String>();
         while((line = in.readLine()) != null) {
             String word = line.trim();
+            wordList.add(word);
         }
     }
 
@@ -44,16 +46,21 @@ public class AnagramDictionary {
         return true;
     }
 
+    //Creates a list of all possible anagrams of a given word
+    //you -> (you,)yuo,oyu,ouy,uyo,uoy
     public List<String> getAnagrams(String targetWord) {
         ArrayList<String> result = new ArrayList<String>();
         return result;
     }
 
+    //Create a list of all possible "getAnagrams+oneMoreCharacter"
+    //yaou,ybou,ycou,...
     public List<String> getAnagramsWithOneMoreLetter(String word) {
         ArrayList<String> result = new ArrayList<String>();
         return result;
     }
 
+    //
     public String pickGoodStarterWord() {
         return "stop";
     }   //5以上
